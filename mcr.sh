@@ -27,7 +27,7 @@ echo "enter the number of addresses you want to read thier content:"
 read num
 if [ -s ./meltdown.out ]
 then
-if [ `sudo ./meltdown.out $meltdown_addr $num` ]
+if ! sudo ./meltdown.out $meltdown_addr $num > /dev/null
 then
 uname -rvi
 head /proc/cpuinfo
