@@ -16,7 +16,7 @@ echo "* to meltdown or not and remediate your system      *"
 echo "* Coded by Ahmed Samir                              *"
 echo "* Cyber Security Lover                              *"
 echo "*****************************************************"
-PS3="please choose one from the above options:"
+PS3="please choose one from the above options (or 'enter' for choices):"
 select opt1 in "Meltdown Checker" "Meltdown Remediation" "exit"
 do 
 case $REPLY in
@@ -39,6 +39,7 @@ head /proc/cpuinfo
 echo "your system is not vulnerable"
 fi
 else
+echo "Building Meltdown Checker. Please choose Checker again to run."
 gcc meltdown.c -o meltdown.out
 fi
 
